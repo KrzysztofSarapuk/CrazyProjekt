@@ -5,22 +5,21 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
 	public float moveSpeed;
-	private Rigidbody2D myRigidbody;
-	public float jumpSpeed;
+    public float jumpSpeed;
+    private Rigidbody2D myRigidbody;	
 
 	//public Transform groundCheck;
 	//public float groundCheckRadius;
 	//public LayerMask whatIsGround;
 	//public bool isJumping;
 
-	private Animator myAnim;
+	//private Animator myAnim;
 
 	// Use this for initialization
 	void Start () {
 
-		myRigidbody = GetComponent<Rigidbody2D> ();
-		//myAnim = GetComponent<Animator> ();
-		
+		myRigidbody = GetComponent<Rigidbody2D> (); //access to rigidbody component
+		//myAnim = GetComponent<Animator> ();		
 	}
 	
 	// Update is called once per frame
@@ -28,20 +27,25 @@ public class PlayerController : MonoBehaviour {
 
 		//isJumping = !Physics2D.OverlapCircle (groundCheck.position, groundCheckRadius, whatIsGround);
 
-		if (Input.GetAxisRaw ("Horizontal") > 0f) {
-			myRigidbody.velocity = new Vector3 (moveSpeed, myRigidbody.velocity.y, 0f);
-            print("->");
-			transform.localScale = new Vector3 (0.5f, 0.5f, 0.5f);
-		} else if (Input.GetAxisRaw ("Horizontal") < 0f) {
+		if (Input.GetAxisRaw ("Horizontal") > 0f) //movement right
+        {
+			myRigidbody.velocity = new Vector2 (moveSpeed, myRigidbody.velocity.y);
+			transform.localScale = new Vector2 (0.5f, 0.5f);
+        }
 
-			myRigidbody.velocity = new Vector3 (-moveSpeed, myRigidbody.velocity.y, 0f);
-			transform.localScale = new Vector3 (-0.5f, 0.5f, 0.5f);
+        else if (Input.GetAxisRaw ("Horizontal") < 0f) //movement left
+        {
+			myRigidbody.velocity = new Vector2 (-moveSpeed, myRigidbody.velocity.y);
+			transform.localScale = new Vector2 (-0.5f, 0.5f);
 
-		} else
-			myRigidbody.velocity = new Vector3 (0f, myRigidbody.velocity.y, 0f);
+        }
 
-		if (Input.GetButtonDown ("Jump") && myRigidbody.velocity.y == 0) {
-			myRigidbody.velocity = new Vector3 (myRigidbody.velocity.x, jumpSpeed, 0f);
+        else
+            myRigidbody.velocity = new Vector2(0f, myRigidbody.velocity.y); // removing sliding effect
+
+        if (Input.GetButtonDown ("Jump") && myRigidbody.velocity.y == 0) //jump
+        {
+			myRigidbody.velocity = new Vector2 (myRigidbody.velocity.x, jumpSpeed);
         }
 
 		//myAnim.SetFloat ("Speed", Mathf.Abs (myRigidbody.velocity.x));
