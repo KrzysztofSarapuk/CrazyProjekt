@@ -1,22 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
 	public float moveSpeed;
     public float jumpSpeed;
-    private Rigidbody2D myRigidbody;	
+    private Rigidbody2D myRigidbody;
+    public bool faceingRight;
 
-	//public Transform groundCheck;
-	//public float groundCheckRadius;
-	//public LayerMask whatIsGround;
-	//public bool isJumping;
+    //public Transform groundCheck;
+    //public float groundCheckRadius;
+    //public LayerMask whatIsGround;
+    //public bool isJumping;
 
-	//private Animator myAnim;
+    //private Animator myAnim;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 
 		myRigidbody = GetComponent<Rigidbody2D> (); //access to rigidbody component
 		//myAnim = GetComponent<Animator> ();		
@@ -31,13 +30,14 @@ public class PlayerController : MonoBehaviour {
         {
 			myRigidbody.velocity = new Vector2 (moveSpeed, myRigidbody.velocity.y);
 			transform.localScale = new Vector2 (0.5f, 0.5f);
+            faceingRight = true;
         }
 
         else if (Input.GetAxisRaw ("Horizontal") < 0f) //movement left
         {
 			myRigidbody.velocity = new Vector2 (-moveSpeed, myRigidbody.velocity.y);
 			transform.localScale = new Vector2 (-0.5f, 0.5f);
-
+            faceingRight = false;
         }
 
         else

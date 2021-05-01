@@ -2334,6 +2334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heroTransform: {fileID: 6888744572502772479}
   kulka: {fileID: 356409419}
+  faceingRight: 1
 --- !u!1 &921442613
 GameObject:
   m_ObjectHideFlags: 0

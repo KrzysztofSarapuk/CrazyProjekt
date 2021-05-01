@@ -6,6 +6,7 @@ public class PlayerAttack : MonoBehaviour
     Rigidbody2D rgdBody;
     public Rigidbody kulka; // ref dla pocisku
     private GameObject shotedBullet; // wystrzelony pocisk
+    public bool faceingRight;
 
     void Start()
     {
@@ -13,19 +14,40 @@ public class PlayerAttack : MonoBehaviour
         heroTransform = GetComponent<Transform>();
     }
 
+
+
     void FireSpell() // attack
     {
+        if (Input.GetAxisRaw("Horizontal") > 0f) //movement right
+        {
+            faceingRight = true;
+        }
+        if (Input.GetAxisRaw("Horizontal") < 0f) //movement right
+        {
+            faceingRight = false;
+        }
+
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
-        print("fire spell");
         Rigidbody instance = Instantiate(kulka, transform.position, transform.rotation) as Rigidbody;
-        shotedBullet = GameObject.Find("kulka(Clone)");  // bullet wystrzelony
 
-        instance.transform.Translate(0.7f, -0.3f, 0);
-        //instance.transform.Rotate(0, 0, -90);
-        instance.AddForce(800, 20, 0);
 
+            if (faceingRight == true)
+            {
+                instance.transform.Translate(0.7f, -0.3f, 0);
+                //instance.transform.Rotate(0, 0, -90);
+                instance.AddForce(800, 20, 0);
+            }
+        else
+            {
+                instance.transform.Translate(0f, -0.3f, 0);
+                instance.transform.Rotate(0, 0, 180);
+                instance.AddForce(-800, 20, 0);
+            }
+
+        //shotedBullet = GameObject.Find("kulka(Clone)");  // bullet wystrzelony
         }
+
     }
 
 
