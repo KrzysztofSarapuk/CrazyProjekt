@@ -17,4 +17,21 @@ public class DeadlyIce : MonoBehaviour {
             other.transform.position = startPoint.position;
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "weapon")
+        {
+            Destroy(collision.gameObject);
+            Destroy(this.gameObject);
+            print("kolizja");
+        }
+
+        if (collision.gameObject.tag == "Player")
+        {
+            Destroy(collision.gameObject);
+            //Destroy(this.gameObject);
+            print("player destroyed");
+        }
+    }
 }
