@@ -5,6 +5,10 @@ public class PlayerAttack : MonoBehaviour
     public Transform heroTransform;
     Rigidbody2D rgdBody;
     public Rigidbody kulka; // ref dla pocisku
+    public Rigidbody weapon1; // ref dla pocisku
+    public Rigidbody weapon2; // ref dla pocisku
+    public Rigidbody weapon3; // ref dla pocisku
+    public Rigidbody weapon4; // ref dla pocisku
     private GameObject shotedBullet; // wystrzelony pocisk
     public bool faceingRight;
 
@@ -27,11 +31,33 @@ public class PlayerAttack : MonoBehaviour
             faceingRight = false;
         }
 
+
+        if (Input.GetKeyDown(KeyCode.Alpha1)) // choice weapon
+        {
+            kulka = weapon1;
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            kulka = weapon2;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            kulka = weapon3;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            kulka = weapon4;
+        }
+
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
-        Rigidbody instance = Instantiate(kulka, transform.position, transform.rotation) as Rigidbody;
+            Rigidbody instance = Instantiate(kulka, transform.position, transform.rotation) as Rigidbody;
 
-
+      
             if (faceingRight == true)
             {
                 instance.transform.Translate(0.7f, -0.3f, 0);
