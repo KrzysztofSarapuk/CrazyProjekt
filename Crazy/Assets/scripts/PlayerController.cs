@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour {
     public float jumpSpeed;
     private Rigidbody2D myRigidbody;
     public bool faceingRight;
+    private Transform PlayerPosition;
+    public Transform startPoint;
 
     //public Transform groundCheck;
     //public float groundCheckRadius;
@@ -18,8 +20,9 @@ public class PlayerController : MonoBehaviour {
     void Start () {
 
 		myRigidbody = GetComponent<Rigidbody2D> (); //access to rigidbody component
-		//myAnim = GetComponent<Animator> ();		
-	}
+        PlayerPosition = GetComponent<Transform>(); // acces to Player position 
+        //myAnim = GetComponent<Animator> ();		
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -51,6 +54,11 @@ public class PlayerController : MonoBehaviour {
 		//myAnim.SetFloat ("Speed", Mathf.Abs (myRigidbody.velocity.x));
         //myAnim.SetBool("Is_Jumping", isJumping);
         //myAnim.SetInteger("Health", 100);
+
+        if (PlayerPosition.position.y < -10)
+        {
+            PlayerPosition.position = startPoint.position;
+        }
 
 	}
 }
