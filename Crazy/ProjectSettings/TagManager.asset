@@ -8,6 +8,7 @@ TagManager:
   - weapon
   - bluestar
   - redstar
+  - ice
   layers:
   - Default
   - TransparentFX

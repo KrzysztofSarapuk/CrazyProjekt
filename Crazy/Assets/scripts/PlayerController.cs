@@ -33,6 +33,13 @@ public class PlayerController : MonoBehaviour
             myRigidbody.gravityScale *= -1;
             Destroy(other.gameObject);
         }
+
+        if (other.gameObject.name == "ice")
+        {
+            //PlayerPosition.transform.Rotate(0, 0, 180);
+            //myRigidbody.isKinematic = false;
+            //Destroy(other.gameObject);
+        }
     }
     // Update is called once per frame
     void Update()
@@ -67,7 +74,7 @@ public class PlayerController : MonoBehaviour
             PlayerPosition.position = startPoint.position;
         }
 
-        if (PlayerPosition.position.y > 15)
+        if (PlayerPosition.position.y > 35)
         {
             PlayerPosition.position = startPoint.position;
         }
