@@ -6,6 +6,8 @@ TagManager:
   tags:
   - duck
   - weapon
+  - bluestar
+  - redstar
   layers:
   - Default
   - TransparentFX
