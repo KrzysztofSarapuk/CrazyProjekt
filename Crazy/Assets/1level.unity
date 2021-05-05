@@ -3366,10 +3366,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fa1065143ad78440829a622474237ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.005
+  speed: 0.1
   goingUp: 1
   Platform: {fileID: 499821184}
-  UpPosition: 4
+  UpPosition: 6
   DownPosition: -3
 --- !u!1 &514915350
 GameObject:
@@ -4158,7 +4158,7 @@ PrefabInstance:
     - target: {fileID: 2657257064930165360, guid: af271598bde22794b91fdbb68caa6935,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -45
+      value: -37
       objectReference: {fileID: 0}
     - target: {fileID: 2657257064930165360, guid: af271598bde22794b91fdbb68caa6935,
         type: 3}
@@ -4234,7 +4234,7 @@ PrefabInstance:
     - target: {fileID: 2657257064930165374, guid: af271598bde22794b91fdbb68caa6935,
         type: 3}
       propertyPath: RightPosition
-      value: -39
+      value: -28
       objectReference: {fileID: 0}
     - target: {fileID: 2657257064930165375, guid: af271598bde22794b91fdbb68caa6935,
         type: 3}
