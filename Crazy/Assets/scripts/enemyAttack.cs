@@ -7,6 +7,7 @@ public class enemyAttack : MonoBehaviour
     public Transform enemyTransform;
     Rigidbody2D enemyRgdBody;
     public int shootingRange;
+    public int shootingRangeY;
     public Rigidbody kulka; // ref dla pocisku
     public Rigidbody weapon1; // ref dla pocisku
     public bool enemyFaceingRight;
@@ -20,11 +21,11 @@ public class enemyAttack : MonoBehaviour
     void Distance()
     {
 
-        int enemy = Convert.ToInt32(enemyTransform.position.x);
-        int player = Convert.ToInt32(playerTransform.position.x);
-        int distance = Math.Abs(player - enemy);
+        int enemy = Convert.ToInt32(enemyTransform.position.x); int enemyY = Convert.ToInt32(enemyTransform.position.y);
+        int player = Convert.ToInt32(playerTransform.position.x); int playerY = Convert.ToInt32(playerTransform.position.y);
+        int distance = Math.Abs(player - enemy); int distanceY = Math.Abs(playerY - enemyY);
 
-        if(enemy < player)
+        if (enemy < player)
         {
             enemyFaceingRight = true;
         }
@@ -34,7 +35,7 @@ public class enemyAttack : MonoBehaviour
             enemyFaceingRight = false;
         }
 
-        if (distance < shootingRange)
+        if (distance < shootingRange && distanceY < shootingRangeY)
         {
             print("distance to:  " + distance);
 
