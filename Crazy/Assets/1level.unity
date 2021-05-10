@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8286,6 +8286,25 @@ MonoBehaviour:
   weapon3: {fileID: 1325998906}
   weapon4: {fileID: 309074956}
   faceingRight: 1
+--- !u!95 &832108943
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832108941}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 46f4b15e847e6e3478f3a90a471fb047, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!58 &832108947
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8299,9 +8318,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.34, y: 0.67}
+  m_Offset: {x: -0.07, y: 0.89}
   serializedVersion: 2
-  m_Radius: 1.1
+  m_Radius: 1.43
 --- !u!1 &855465876
 GameObject:
   m_ObjectHideFlags: 0
@@ -22537,17 +22556,22 @@ PrefabInstance:
     - target: {fileID: 6888744573333762927, guid: 8246c2adc763eed4696bd0ac8925c21b,
         type: 3}
       propertyPath: m_Radius
-      value: 1.55
+      value: 1.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888744573333762927, guid: 8246c2adc763eed4696bd0ac8925c21b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6888744573333762927, guid: 8246c2adc763eed4696bd0ac8925c21b,
         type: 3}
       propertyPath: m_Offset.x
-      value: -0.09
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6888744573333762927, guid: 8246c2adc763eed4696bd0ac8925c21b,
         type: 3}
       propertyPath: m_Offset.y
-      value: -1.68
+      value: -2.14
       objectReference: {fileID: 0}
     - target: {fileID: 6888744573333762928, guid: 8246c2adc763eed4696bd0ac8925c21b,
         type: 3}
@@ -22558,7 +22582,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 67959a7cb166f0347bb91cd0de7c5d94,
+      objectReference: {fileID: 21300000, guid: ee2afbd966b5d5843ab0fd528cd8efe1,
         type: 3}
     - target: {fileID: 6888744573333762931, guid: 8246c2adc763eed4696bd0ac8925c21b,
         type: 3}
