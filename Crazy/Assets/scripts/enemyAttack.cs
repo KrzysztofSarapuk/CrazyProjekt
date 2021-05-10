@@ -9,8 +9,9 @@ public class enemyAttack : MonoBehaviour
     public int shootingRange;
     public int shootingRangeY;
     public Rigidbody kulka; // ref dla pocisku
-    public Rigidbody weapon1; // ref dla pocisku
+    //public Rigidbody weapon1; // ref dla pocisku
     public bool enemyFaceingRight;
+    private GameObject shotedEnemyBullet;
     void Start()
     {       
         GameObject playerTransform = GameObject.Find("Player");
@@ -37,7 +38,7 @@ public class enemyAttack : MonoBehaviour
 
         if (distance < shootingRange && distanceY < shootingRangeY)
         {
-            print("distance to:  " + distance);
+            //print("distance to:  " + distance);
 
             EnemyShooting();
 
@@ -69,9 +70,23 @@ public class enemyAttack : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+    void ClearBullets()
+    {
+        if (GameObject.Find("bluestar(Clone)") != null)
+        {
+            shotedEnemyBullet = GameObject.Find("bluestar(Clone)");  // bullet wystrzelony
+            if (Mathf.Abs(shotedEnemyBullet.transform.position.x - enemyTransform.transform.position.x) > 40)
+            {
+                Destroy(shotedEnemyBullet);
+                print("i will destroy");
+                print(Mathf.Abs(shotedEnemyBullet.transform.position.x - enemyTransform.transform.position.x));
+            }
+        }
+
+    }
     void Update()
     {
         Distance();
+        ClearBullets();
     }
 }

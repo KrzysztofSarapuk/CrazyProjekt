@@ -71,9 +71,51 @@ public class PlayerAttack : MonoBehaviour
                 instance.AddForce(-800, 20, 0);
             }
 
-        //shotedBullet = GameObject.Find("kulka(Clone)");  // bullet wystrzelony
+        //shotedBullet = GameObject.Find("weapon1(Clone)");  // bullet wystrzelony
+            //if (shotedBullet.transform.position.x > heroTransform.transform.position.x + 3)
+            //{
+            //    Destroy(shotedBullet);
+            //}
         }
 
+    }
+
+    void ClearBullets()
+    {
+        if (GameObject.Find("weapon1(Clone)") != null)
+        {
+            shotedBullet = GameObject.Find("weapon1(Clone)");  // bullet wystrzelony
+            if (Mathf.Abs(shotedBullet.transform.position.x - heroTransform.transform.position.x) > 12)
+            {
+                Destroy(shotedBullet);
+            }
+        }
+
+        if (GameObject.Find("weapon2(Clone)") != null)
+        {
+            shotedBullet = GameObject.Find("weapon2(Clone)");  // bullet wystrzelony
+            if (Mathf.Abs(shotedBullet.transform.position.x - heroTransform.transform.position.x) > 12)
+            {
+                Destroy(shotedBullet);
+            }
+        }
+
+        if (GameObject.Find("weapon3(Clone)") != null)
+        {
+            shotedBullet = GameObject.Find("weapon3(Clone)");  // bullet wystrzelony
+            if (Mathf.Abs(shotedBullet.transform.position.x - heroTransform.transform.position.x) > 12)
+            {
+                Destroy(shotedBullet);
+            }
+        }
+        if (GameObject.Find("redstar(Clone)") != null)
+        {
+            shotedBullet = GameObject.Find("redstar(Clone)");  // bullet wystrzelony
+            if (Mathf.Abs(shotedBullet.transform.position.x - heroTransform.transform.position.x) > 12)
+            {
+                Destroy(shotedBullet);
+            }
+        }
     }
 
 
@@ -82,5 +124,6 @@ public class PlayerAttack : MonoBehaviour
     void Update()
     {
         FireSpell();
+        ClearBullets();
     }
 }
