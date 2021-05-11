@@ -10,12 +10,14 @@ public class PlayerController : MonoBehaviour
     private Transform PlayerPosition;
     public Transform startPoint;
 
+    Animator anim;
+
     void Start()
     {
 
         myRigidbody = GetComponent<Rigidbody2D>(); //access to rigidbody component
         PlayerPosition = GetComponent<Transform>(); // acces to Player position 
-        //myAnim = GetComponent<Animator> ();		
+        anim = GetComponent<Animator> ();		
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -46,11 +48,14 @@ public class PlayerController : MonoBehaviour
     {
 
 
+
+
         if (Input.GetAxisRaw("Horizontal") > 0f) //movement right
         {
             myRigidbody.velocity = new Vector2(moveSpeed, myRigidbody.velocity.y);
             transform.localScale = new Vector2(0.5f, 0.5f);
             faceingRight = true;
+            anim.SetFloat("speed", 1);
         }
 
         else if (Input.GetAxisRaw("Horizontal") < 0f) //movement left
@@ -58,7 +63,11 @@ public class PlayerController : MonoBehaviour
             myRigidbody.velocity = new Vector2(-moveSpeed, myRigidbody.velocity.y);
             transform.localScale = new Vector2(-0.5f, 0.5f);
             faceingRight = false;
+            anim.SetFloat("speed", 1);
         }
+
+
+
 
         else
             myRigidbody.velocity = new Vector2(0f, myRigidbody.velocity.y); // removing sliding effect
@@ -77,6 +86,11 @@ public class PlayerController : MonoBehaviour
         if (PlayerPosition.position.y > 35)
         {
             PlayerPosition.position = startPoint.position;
+        }
+
+        if (Input.GetAxisRaw("Horizontal") == 0f) //movement left
+        {
+            anim.SetFloat("speed", 0);
         }
 
     }
