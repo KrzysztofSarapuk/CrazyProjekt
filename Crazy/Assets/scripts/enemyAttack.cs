@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class enemyAttack : MonoBehaviour
@@ -13,11 +14,39 @@ public class enemyAttack : MonoBehaviour
     public bool enemyFaceingRight;
     private GameObject shotedEnemyBullet;
     int counterBullets;
+    public  float timeShootingDelay = 3;
+
     void Start()
     {       
         GameObject playerTransform = GameObject.Find("Player");
         enemyTransform = GetComponent<Transform>();
         enemyRgdBody = GetComponent<Rigidbody2D>();
+
+        StartCoroutine(DelayEnemyShooting());
+    }
+
+    IEnumerator DelayEnemyShooting()
+    {
+        print("delay shooting");
+        yield return new WaitForSeconds(timeShootingDelay);
+
+        counterBullets++;
+        if (counterBullets < 2)
+        {
+            Rigidbody instance = Instantiate(kulka, transform.position, transform.rotation) as Rigidbody;
+            if (enemyFaceingRight == true)
+            {
+                instance.transform.Translate(0.7f, -0.3f, 0);
+                instance.AddForce(900, 70, 0);
+
+            }
+            else
+            {
+                instance.transform.Translate(-1.2f, -0.3f, 0);
+                instance.transform.Rotate(0, 0, 180);
+                instance.AddForce(-900, 70, 0);
+            }
+        }
     }
 
     void Distance()
@@ -46,23 +75,26 @@ public class enemyAttack : MonoBehaviour
 
     void EnemyShooting()
     {
-        counterBullets++;
-        if (counterBullets < 11)
-        {
-            Rigidbody instance = Instantiate(kulka, transform.position, transform.rotation) as Rigidbody;
-            if (enemyFaceingRight == true)
-            {
-                instance.transform.Translate(0.7f, -0.3f, 0);
-                instance.AddForce(800, 50, 0);
 
-            }
-            else
-            {
-                instance.transform.Translate(-1.2f, -0.3f, 0);
-                instance.transform.Rotate(0, 0, 180);
-                instance.AddForce(-800, 50, 0);
-            }
-        }
+        StartCoroutine(DelayEnemyShooting());
+
+        //counterBullets++;
+        //if (counterBullets < 11)
+        //{
+        //    Rigidbody instance = Instantiate(kulka, transform.position, transform.rotation) as Rigidbody;
+        //    if (enemyFaceingRight == true)
+        //    {
+        //        instance.transform.Translate(0.7f, -0.3f, 0);
+        //        instance.AddForce(800, 50, 0);
+
+        //    }
+        //    else
+        //    {
+        //        instance.transform.Translate(-1.2f, -0.3f, 0);
+        //        instance.transform.Rotate(0, 0, 180);
+        //        instance.AddForce(-800, 50, 0);
+        //    }
+        //}
     }
 
     void ClearBullets()
@@ -70,7 +102,7 @@ public class enemyAttack : MonoBehaviour
         if (GameObject.Find("bluestar(Clone)") != null)
         {
             shotedEnemyBullet = GameObject.Find("bluestar(Clone)");  // bullet wystrzelony
-            if (Mathf.Abs(shotedEnemyBullet.transform.position.x - enemyTransform.transform.position.x) > 40)
+            if (Mathf.Abs(shotedEnemyBullet.transform.position.x - playerTransform.transform.position.x) > 12)
             {
                 Destroy(shotedEnemyBullet);
             }

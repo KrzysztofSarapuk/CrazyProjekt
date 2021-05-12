@@ -7000,6 +7000,25 @@ CircleCollider2D:
   m_Offset: {x: -0.34, y: 0.67}
   serializedVersion: 2
   m_Radius: 1.1
+--- !u!95 &832108948
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832108941}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b539f2d4219e30c4eb18752c9950f4e3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &837062971
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7218,8 +7237,8 @@ MonoBehaviour:
   playerTransform: {fileID: 6888744572502772479}
   enemyTransform: {fileID: 855465879}
   shootingRange: 7
+  shootingRangeY: 0
   kulka: {fileID: 1325998906}
-  weapon1: {fileID: 309074956}
   enemyFaceingRight: 0
 --- !u!61 &855465882
 BoxCollider2D:
