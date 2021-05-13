@@ -75,26 +75,7 @@ public class enemyAttack : MonoBehaviour
 
     void EnemyShooting()
     {
-
         StartCoroutine(DelayEnemyShooting());
-
-        //counterBullets++;
-        //if (counterBullets < 11)
-        //{
-        //    Rigidbody instance = Instantiate(kulka, transform.position, transform.rotation) as Rigidbody;
-        //    if (enemyFaceingRight == true)
-        //    {
-        //        instance.transform.Translate(0.7f, -0.3f, 0);
-        //        instance.AddForce(800, 50, 0);
-
-        //    }
-        //    else
-        //    {
-        //        instance.transform.Translate(-1.2f, -0.3f, 0);
-        //        instance.transform.Rotate(0, 0, 180);
-        //        instance.AddForce(-800, 50, 0);
-        //    }
-        //}
     }
 
     void ClearBullets()
