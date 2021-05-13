@@ -60,22 +60,68 @@ public class PlayerAttack : MonoBehaviour
       
             if (faceingRight == true)
             {
-                instance.transform.Translate(0.7f, -0.3f, 0);
-                //instance.transform.Rotate(0, 0, -90);
-                instance.AddForce(800, 20, 0);
+                //instance.transform.Translate(0.7f, -0.3f, 0);
+                ////instance.transform.Rotate(0, 0, -90);
+                //instance.AddForce(800, 70, 0);
+
+
+                if (kulka == weapon1)
+                {
+                    instance.transform.Translate(0.7f, -0.3f, 0);
+                    //instance.transform.Rotate(0, 0, -90);
+                    instance.AddForce(800, 70, 0);
+                }
+                if (kulka == weapon2)
+                {
+                    instance.transform.Translate(0.7f, -0.3f, 0);
+                    //instance.transform.Rotate(0, 0, -90);
+                    instance.AddForce(200, 150, 0);
+                }
+
+                if (kulka == weapon3)
+                {
+                    instance.transform.Translate(0.7f, -0.3f, 0);
+                    //instance.transform.Rotate(0, 0, -90);
+                    instance.AddForce(500, 550, 0);
+                }
+
+                if (kulka == weapon4)
+                {
+                    instance.transform.Translate(0.7f, -0.3f, 0);
+                    //instance.transform.Rotate(0, 0, -90);
+                    instance.AddForce(150, 450, 0);
+                }
             }
         else
             {
-                instance.transform.Translate(0f, -0.3f, 0);
-                instance.transform.Rotate(0, 0, 180);
-                instance.AddForce(-800, 20, 0);
+                if (kulka == weapon1)
+                {
+                    instance.transform.Translate(-0.6f, -0.3f, 0);
+                    //instance.transform.Rotate(0, 0, -90);
+                    instance.AddForce(-800, 70, 0);
+                }
+                if (kulka == weapon2)
+                {
+                    instance.transform.Translate(-0.7f, -0.3f, 0);
+                    //instance.transform.Rotate(0, 0, -90);
+                    instance.AddForce(-200, 150, 0);
+                }
+
+                if (kulka == weapon3)
+                {
+                    instance.transform.Translate(-0.7f, -0.3f, 0);
+                    //instance.transform.Rotate(0, 0, -90);
+                    instance.AddForce(-500, 550, 0);
+                }
+
+                if (kulka == weapon4)
+                {
+                    instance.transform.Translate(-0.7f, -0.3f, 0);
+                    //instance.transform.Rotate(0, 0, -90);
+                    instance.AddForce(-150, 450, 0);
+                }
             }
 
-        //shotedBullet = GameObject.Find("weapon1(Clone)");  // bullet wystrzelony
-            //if (shotedBullet.transform.position.x > heroTransform.transform.position.x + 3)
-            //{
-            //    Destroy(shotedBullet);
-            //}
         }
 
     }

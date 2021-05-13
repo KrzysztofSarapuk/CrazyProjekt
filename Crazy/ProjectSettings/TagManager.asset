@@ -9,6 +9,8 @@ TagManager:
   - bluestar
   - redstar
   - ice
+  - red
+  - enemy
   layers:
   - Default
   - TransparentFX
