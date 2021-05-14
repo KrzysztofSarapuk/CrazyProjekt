@@ -5159,6 +5159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 495477601}
   - component: {fileID: 495477602}
+  - component: {fileID: 495477603}
   m_Layer: 0
   m_Name: teleport-green
   m_TagString: Untagged
@@ -5175,7 +5176,7 @@ Transform:
   m_GameObject: {fileID: 495477600}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.02, y: 8.24547, z: 8.597656}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 1674927361}
   m_RootOrder: 1
@@ -5219,7 +5220,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f90f65f3d71d39547946018adb9f56b0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6cc82ae5bb55b0f468025c3ce4ae8a01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5230,6 +5231,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &495477603
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495477600}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 939d595ed264bed4d872fc4c342bd401, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &499821179
 GameObject:
   m_ObjectHideFlags: 0
