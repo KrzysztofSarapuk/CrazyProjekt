@@ -6,9 +6,10 @@ public class DeadlyIce : MonoBehaviour {
 
     public Transform startPoint;
 	// Use this for initialization
-	void Start () {
-		
-	}
+	void Start () 
+    {
+        GameObject respointTransform = GameObject.Find("respointPoint");
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
