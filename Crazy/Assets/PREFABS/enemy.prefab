@@ -121,7 +121,6 @@ MonoBehaviour:
   shootingRangeY: 2
   kulka: {fileID: 0}
   enemyFaceingRight: 0
-  timeShootingDelay: 0
 --- !u!50 &4788432684327926744
 Rigidbody2D:
   serializedVersion: 4
