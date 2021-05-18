@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+[RequireComponent (typeof(AudioSource))]
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class PlayerAttack : MonoBehaviour
     public Rigidbody weapon4; // ref dla pocisku
     private GameObject shotedBullet; // wystrzelony pocisk
     public bool faceingRight;
+
+    // sounds
+    [SerializeField] public AudioSource musicBase; //baza dzwiekow
+    [SerializeField] private AudioClip attack1; // 1 dzwiek
 
     void Start()
     {
@@ -55,6 +60,9 @@ public class PlayerAttack : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
+
+            musicBase.PlayOneShot(attack1);
+
             Rigidbody instance = Instantiate(kulka, transform.position, transform.rotation) as Rigidbody;
 
       

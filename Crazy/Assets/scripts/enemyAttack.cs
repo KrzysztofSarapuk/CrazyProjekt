@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+[RequireComponent(typeof(AudioSource))]
 
 public class enemyAttack : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class enemyAttack : MonoBehaviour
     public bool enemyFaceingRight;
     private GameObject shotedEnemyBullet;
     int counterBullets;
+
+    [SerializeField] public AudioSource musicBase; //baza dzwiekow
+    [SerializeField] public AudioClip attackEnemy; // 1 dzwiek
 
     void Start()
     {       
@@ -48,9 +52,13 @@ public class enemyAttack : MonoBehaviour
 
     void EnemyShooting()
     {
+        //musicBase.PlayOneShot(attackEnemy);
+
         counterBullets++;
         if (counterBullets < 2)
         {
+            musicBase.PlayOneShot(attackEnemy);
+
             Rigidbody instance = Instantiate(kulka, transform.position, transform.rotation) as Rigidbody;
             if (enemyFaceingRight == true)
             {
