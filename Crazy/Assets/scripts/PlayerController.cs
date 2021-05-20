@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     private Transform PlayerPosition;
     public Transform startPoint;
 
+    private float time = 0.0f;
+
     Animator anim;
 
     void Start()
@@ -35,20 +37,22 @@ public class PlayerController : MonoBehaviour
             myRigidbody.gravityScale *= -1;
             Destroy(other.gameObject);
         }
+    }
 
-        if (other.gameObject.name == "ice")
+
+    void TimeEndJump()
+    {
+        time = time + Time.fixedDeltaTime;
+        if (time > 1.7f)
         {
-            //PlayerPosition.transform.Rotate(0, 0, 180);
-            //myRigidbody.isKinematic = false;
-            //Destroy(other.gameObject);
+            //Debug.Log(gameObject.transform.position.y + " : " + time);
+            anim.SetBool("jump", false);
+            time = 0.0f;
         }
     }
     // Update is called once per frame
     void Update()
     {
-
-
-
 
         if (Input.GetAxisRaw("Horizontal") > 0f) //movement right
         {
@@ -74,9 +78,10 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && myRigidbody.velocity.y == 0) //jump
         {
+            anim.SetBool("jump", true);
             myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpSpeed);
         }
-
+        TimeEndJump();
 
         if (PlayerPosition.position.y < -10)
         {
