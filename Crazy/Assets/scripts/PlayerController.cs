@@ -47,6 +47,7 @@ public class PlayerController : MonoBehaviour
         {
             //Debug.Log(gameObject.transform.position.y + " : " + time);
             anim.SetBool("jump", false);
+            anim.SetBool("run", false);
             time = 0.0f;
         }
     }
@@ -54,12 +55,28 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
+        //if (Input.GetKeyDown(KeyCode.LeftShift))
+        //{
+        //    anim.SetBool("run", true);
+        //}
+
+        //if (Input.GetKeyDown(KeyCode.LeftShift) == false)
+        //{
+        //    anim.SetBool("run", false);
+        //}
+
         if (Input.GetAxisRaw("Horizontal") > 0f) //movement right
         {
             myRigidbody.velocity = new Vector2(moveSpeed, myRigidbody.velocity.y);
             transform.localScale = new Vector2(0.5f, 0.5f);
             faceingRight = true;
             anim.SetFloat("speed", 1);
+
+            if ((Input.GetKeyDown(KeyCode.LeftShift) == true))
+            {
+                anim.SetFloat("speed", 0);
+                anim.SetBool("run", true);
+            }
         }
 
         else if (Input.GetAxisRaw("Horizontal") < 0f) //movement left
@@ -70,6 +87,19 @@ public class PlayerController : MonoBehaviour
             anim.SetFloat("speed", 1);
         }
 
+
+        //if ((Input.GetKeyDown(KeyCode.LeftShift) == true) && (Input.GetAxisRaw("Horizontal") > 0f))
+        //{
+        //    myRigidbody.velocity = new Vector2(2 * moveSpeed, 2* myRigidbody.velocity.y);
+        //    transform.localScale = new Vector2(0.5f, 0.5f);
+        //    faceingRight = true;
+        //    anim.SetFloat("run", 1);
+        //}
+
+        //if (Input.GetKeyUp(KeyCode.LeftShift))
+        //{
+        //    anim.SetBool("run", false);
+        //}
 
 
 
@@ -83,7 +113,7 @@ public class PlayerController : MonoBehaviour
         }
         TimeEndJump();
 
-        if (PlayerPosition.position.y < -10)
+        if (PlayerPosition.position.y < -20) // player out of screen - respam
         {
             PlayerPosition.position = startPoint.position;
         }
@@ -96,6 +126,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetAxisRaw("Horizontal") == 0f) //movement left
         {
             anim.SetFloat("speed", 0);
+            //anim.SetBool("run", false);
         }
 
     }
