@@ -118,7 +118,7 @@ public class PlayerController : MonoBehaviour
             PlayerPosition.position = startPoint.position;
         }
 
-        if (PlayerPosition.position.y > 35)
+        if (PlayerPosition.position.y > 85)
         {
             PlayerPosition.position = startPoint.position;
         }
