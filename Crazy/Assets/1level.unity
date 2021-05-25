@@ -3507,7 +3507,7 @@ PrefabInstance:
     - target: {fileID: 2657257064930165374, guid: af271598bde22794b91fdbb68caa6935,
         type: 3}
       propertyPath: speed
-      value: 0.005
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2657257064930165374, guid: af271598bde22794b91fdbb68caa6935,
         type: 3}
@@ -8002,7 +8002,7 @@ PrefabInstance:
     - target: {fileID: 2657257064930165374, guid: af271598bde22794b91fdbb68caa6935,
         type: 3}
       propertyPath: speed
-      value: 0.05
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2657257064930165374, guid: af271598bde22794b91fdbb68caa6935,
         type: 3}
@@ -10411,7 +10411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c73ba8a90912464ead1563cd1f7c3b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.05
+  speed: 1
   faceingLeft: 1
   Enemy: {fileID: 771873606}
   leftPosition: -47.2
@@ -14904,7 +14904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c73ba8a90912464ead1563cd1f7c3b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.05
+  speed: 1
   faceingLeft: 1
   Enemy: {fileID: 1119456936}
   leftPosition: 17.5
@@ -15791,7 +15791,7 @@ PrefabInstance:
     - target: {fileID: 2657257064930165374, guid: af271598bde22794b91fdbb68caa6935,
         type: 3}
       propertyPath: speed
-      value: 0.05
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2657257064930165374, guid: af271598bde22794b91fdbb68caa6935,
         type: 3}
@@ -22830,7 +22830,7 @@ PrefabInstance:
     - target: {fileID: 4788432684327926741, guid: 19fdf5db67c68d147a6b810a96a56e09,
         type: 3}
       propertyPath: speed
-      value: 0.03
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4788432684327926741, guid: 19fdf5db67c68d147a6b810a96a56e09,
         type: 3}
@@ -24461,7 +24461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c73ba8a90912464ead1563cd1f7c3b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.02
+  speed: 1
   faceingLeft: 1
   Enemy: {fileID: 0}
   leftPosition: -17
@@ -25509,7 +25509,7 @@ PrefabInstance:
     - target: {fileID: 2657257064930165374, guid: af271598bde22794b91fdbb68caa6935,
         type: 3}
       propertyPath: speed
-      value: 0.05
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2657257064930165374, guid: af271598bde22794b91fdbb68caa6935,
         type: 3}
@@ -26453,7 +26453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c73ba8a90912464ead1563cd1f7c3b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.03
+  speed: 1
   faceingLeft: 1
   Enemy: {fileID: 0}
   leftPosition: -10.66
@@ -26884,7 +26884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c73ba8a90912464ead1563cd1f7c3b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.05
+  speed: 1
   faceingLeft: 1
   Enemy: {fileID: 0}
   leftPosition: -15.09
@@ -27554,7 +27554,7 @@ PrefabInstance:
     - target: {fileID: 6639760745610292841, guid: fec071e514d6e3645809e6b4ec62023e,
         type: 3}
       propertyPath: speed
-      value: 0.03
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6639760745610292841, guid: fec071e514d6e3645809e6b4ec62023e,
         type: 3}
@@ -29484,6 +29484,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4788432684327926741, guid: 19fdf5db67c68d147a6b810a96a56e09,
+        type: 3}
+      propertyPath: speed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4788432684327926741, guid: 19fdf5db67c68d147a6b810a96a56e09,
         type: 3}

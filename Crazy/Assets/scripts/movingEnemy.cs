@@ -17,7 +17,7 @@ public class movingEnemy : MonoBehaviour {
         // movement left to position x
         if (this.transform.localPosition.x > leftPosition && faceingLeft)
         {
-            transform.Translate(-speed, 0, 0);
+            transform.Translate(-speed * Time.deltaTime, 0, 0);
             if (this.transform.localPosition.x < leftPosition)
             {
                 transform.Translate(speed, 0, 0);
@@ -29,7 +29,7 @@ public class movingEnemy : MonoBehaviour {
         // movement right to position x
         if (this.transform.localPosition.x < RightPosition && !faceingLeft)
         {
-            transform.Translate(-speed, 0, 0);
+            transform.Translate(-speed * Time.deltaTime, 0, 0);
             if (this.transform.localPosition.x > RightPosition - 0.1)
             {
                 faceingLeft = !faceingLeft;
