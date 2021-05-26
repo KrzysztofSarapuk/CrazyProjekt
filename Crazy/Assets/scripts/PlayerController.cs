@@ -113,7 +113,7 @@ public class PlayerController : MonoBehaviour
         }
         TimeEndJump();
 
-        if (PlayerPosition.position.y < -20) // player out of screen - respam
+        if (PlayerPosition.position.y < -90) // player out of screen - respam
         {
             PlayerPosition.position = startPoint.position;
         }
