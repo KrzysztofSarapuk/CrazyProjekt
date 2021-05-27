@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 17
+  controlID: 23
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 18
+  controlID: 24
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 19
+  controlID: 25
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -295,8 +295,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 252
-    y: 73.6
+    x: 0
+    y: 0
     width: 885
     height: 439
   m_ViewDataDictionary: {fileID: 0}
@@ -335,7 +335,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -394,10 +394,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 6094}
-      m_SelectedIDs: 9cf5ffff
-      m_LastClickedID: -2660
-      m_ExpandedIDs: 9e58ffff9cf5fffff2f6ffff86360000e0360000b6380000ba380000683a0000d83e0000403f0000
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 72460000
+      m_LastClickedID: 0
+      m_ExpandedIDs: b2c9ffffded0ffff74d7ffffa0deffffc2f5ffff68fbffff184a00006e4b0000464c0000a04c0000d04c0000424d0000b84d0000ee4d00001a4e0000644e0000424f00000a6f0000748c0000088f0000b4bd0000e0bf000036db0000cadd0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -457,9 +457,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -7.902949, y: -28.216438, z: -123.54297}
+    m_Target: {x: 13.644718, y: 2.2226338, z: -139.71484}
     speed: 2
-    m_Value: {x: -7.902949, y: -28.216438, z: -123.54297}
+    m_Value: {x: 13.644718, y: 2.2226338, z: -139.71484}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -509,9 +509,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 6.151019
+    m_Target: 12.075632
     speed: 2
-    m_Value: 6.440858
+    m_Value: 12.075632
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -604,20 +604,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/2DAssets/Prefabs
+    - Assets/2DAssets/Monsters/Archer
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/2DAssets/Prefabs
+  - Assets/2DAssets/Monsters/Archer
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Program Files\Unity Hub\Unity\CrazyProjekt\Crazy
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: d2450000
-    m_LastClickedID: 17874
-    m_ExpandedIDs: 0000000066450000684500006a4500006c4500006e45000070450000724500007445000076450000784500007a45000000ca9a3b
+    m_SelectedIDs: e6470000
+    m_LastClickedID: 18406
+    m_ExpandedIDs: 00000000ac470000ae470000b0470000b2470000b4470000b6470000b8470000ba470000bc470000be470000c047000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -645,7 +645,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000066450000684500006a4500006c4500006e45000070450000724500007445000076450000784500007a450000
+    m_ExpandedIDs: 00000000ac470000ae470000b0470000b2470000b4470000b6470000b8470000ba470000bc470000be470000c0470000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
