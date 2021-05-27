@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/1level.unity
     guid: 023119c3732469f4b8a087e9547d4bfe
   - enabled: 1
-    path: Assets/2level-NOWY.unity
+    path: Assets/2level.unity
     guid: ee308458e5286ea4da1be777eaa4f319
   - enabled: 1
     path: Assets/3level.unity
