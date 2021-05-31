@@ -10,6 +10,11 @@ public class teleport : MonoBehaviour
         {
             other.transform.position = teleportPoint.position;
         }
+        if (other.gameObject.tag == "enemy")
+        {
+            other.transform.position = teleportPoint.position;
+        }
     }
-
 }
+
+
