@@ -11,6 +11,7 @@ TagManager:
   - ice
   - red
   - enemy
+  - greenbar
   layers:
   - Default
   - TransparentFX

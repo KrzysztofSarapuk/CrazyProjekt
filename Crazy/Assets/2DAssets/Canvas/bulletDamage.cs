@@ -10,9 +10,9 @@ public class bulletDamage : MonoBehaviour
 
     public Transform startPoint;
 
-    public Text livesText; // nowe
+    //public Text livesText; // nowe
 
-    private int numberOfLives;
+    //private int numberOfLives;
 
     public void Start()
     {
@@ -30,7 +30,7 @@ public class bulletDamage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) // zabija gracza
     {
-        if (collision.tag == "bullet")
+        if (collision.tag == "enemy")
         {
             //Debug.Log("trafiony");
             MinusHealth(damage);
@@ -39,13 +39,13 @@ public class bulletDamage : MonoBehaviour
             {
                 this.transform.position = startPoint.position; // restart gracza
                 pasek.fillAmount = 1;
-                stateHealth.text = (pasek.fillAmount * 100).ToString() + " %";
+                stateHealth.text = ("Health: " + pasek.fillAmount * 100).ToString() + " %";
 
                 //zmniejszenie ilosci zycia o 1
-                print(livesText.text + " - ilosc zycia string");
-                numberOfLives = int.Parse(livesText.text.Substring(7));
-                print(numberOfLives + " - ilosc zycia int");               
-                livesText.text = "Lives: " + (numberOfLives - 1).ToString();
+                //print(livesText.text + " - ilosc zycia string");
+                //numberOfLives = int.Parse(livesText.text.Substring(7));
+                //print(numberOfLives + " - ilosc zycia int");               
+                //livesText.text = "Lives: " + (numberOfLives - 1).ToString();
             }
         }
     }

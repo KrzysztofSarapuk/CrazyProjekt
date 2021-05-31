@@ -19,7 +19,8 @@ public class PlayerController : MonoBehaviour
 
         myRigidbody = GetComponent<Rigidbody2D>(); //access to rigidbody component
         PlayerPosition = GetComponent<Transform>(); // acces to Player position 
-        anim = GetComponent<Animator> ();		
+        anim = GetComponent<Animator> ();
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
