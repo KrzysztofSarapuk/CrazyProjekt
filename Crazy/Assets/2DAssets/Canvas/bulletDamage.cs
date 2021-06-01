@@ -48,6 +48,24 @@ public class bulletDamage : MonoBehaviour
                 //livesText.text = "Lives: " + (numberOfLives - 1).ToString();
             }
         }
+        if (collision.tag == "knight")
+        {
+            //Debug.Log("trafiony");
+            MinusHealth(damage);
+            stateHealth.text = (pasek.fillAmount * 100).ToString() + " %";
+            if ((pasek.fillAmount * 100) < 2)
+            {
+                this.transform.position = startPoint.position; // restart gracza
+                pasek.fillAmount = 1;
+                stateHealth.text = ("Health: " + pasek.fillAmount * 100).ToString() + " %";
+
+                //zmniejszenie ilosci zycia o 1
+                //print(livesText.text + " - ilosc zycia string");
+                //numberOfLives = int.Parse(livesText.text.Substring(7));
+                //print(numberOfLives + " - ilosc zycia int");               
+                //livesText.text = "Lives: " + (numberOfLives - 1).ToString();
+            }
+        }
     }
 
     public void MinusHealth(float value)

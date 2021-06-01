@@ -21,7 +21,7 @@ public class DeadlyIce : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "weapon")
+        if (collision.gameObject.tag == "weapon" && collision.gameObject.tag != "knight")
         {
             Destroy(collision.gameObject);
             Destroy(this.gameObject);

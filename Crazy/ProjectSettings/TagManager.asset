@@ -12,6 +12,7 @@ TagManager:
   - red
   - enemy
   - greenbar
+  - knight
   layers:
   - Default
   - TransparentFX
