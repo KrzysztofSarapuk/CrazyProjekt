@@ -25935,6 +25935,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Death_1
       objectReference: {fileID: 0}
+    - target: {fileID: 2657257064930165372, guid: af271598bde22794b91fdbb68caa6935,
+        type: 3}
+      propertyPath: m_TagString
+      value: enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 2657257064930165374, guid: af271598bde22794b91fdbb68caa6935,
         type: 3}
       propertyPath: speed
@@ -28508,7 +28513,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.3
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -29287,6 +29292,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Death_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2657257064930165372, guid: af271598bde22794b91fdbb68caa6935,
+        type: 3}
+      propertyPath: m_TagString
+      value: enemy
       objectReference: {fileID: 0}
     - target: {fileID: 2657257064930165374, guid: af271598bde22794b91fdbb68caa6935,
         type: 3}
