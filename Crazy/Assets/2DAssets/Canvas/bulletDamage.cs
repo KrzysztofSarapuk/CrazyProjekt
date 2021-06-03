@@ -18,7 +18,7 @@ public class bulletDamage : MonoBehaviour
     {
         pasek = HealthBar.FindObjectOfType<Image>(); //gorny pasek
         pasek = healthBarFilling;
-        stateHealth.text = (pasek.fillAmount * 100).ToString() + " %";
+        stateHealth.text = ("Health: " + pasek.fillAmount * 100).ToString() + " %";
     }
 
     //public void OnChangePlayerLives(int numLives)
@@ -34,7 +34,10 @@ public class bulletDamage : MonoBehaviour
         {
             //Debug.Log("trafiony");
             MinusHealth(damage);
-            stateHealth.text = (pasek.fillAmount * 100).ToString() + " %";
+            
+            stateHealth.text = ("Health: " + System.Math.Round(pasek.fillAmount * 100)).ToString() + " %";
+
+
             if ((pasek.fillAmount * 100) < 2)
             {
                 this.transform.position = startPoint.position; // restart gracza
