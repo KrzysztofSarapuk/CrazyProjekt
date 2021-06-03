@@ -55,12 +55,12 @@ public class bulletDamage : MonoBehaviour
         {
             //Debug.Log("trafiony");
             MinusHealth(damage);
-            stateHealth.text = (pasek.fillAmount * 100).ToString() + " %";
+            stateHealth.text = ("Health: " + System.Math.Round(pasek.fillAmount * 100)).ToString() + " %";
             if ((pasek.fillAmount * 100) < 2)
             {
                 this.transform.position = startPoint.position; // restart gracza
                 pasek.fillAmount = 1;
-                stateHealth.text = ("Health: " + pasek.fillAmount * 100).ToString() + " %";
+                stateHealth.text = ("Health: " + System.Math.Round(pasek.fillAmount * 100)).ToString() + " %";
 
                 //zmniejszenie ilosci zycia o 1
                 //print(livesText.text + " - ilosc zycia string");
