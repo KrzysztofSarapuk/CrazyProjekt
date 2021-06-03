@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7936,7 +7936,7 @@ PrefabInstance:
     - target: {fileID: 2657257064930165360, guid: af271598bde22794b91fdbb68caa6935,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.02
+      value: -6.93
       objectReference: {fileID: 0}
     - target: {fileID: 2657257064930165360, guid: af271598bde22794b91fdbb68caa6935,
         type: 3}
@@ -8062,7 +8062,7 @@ Animator:
   m_GameObject: {fileID: 274189316}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: db357413ad1a1214789512362d16a325, type: 2}
+  m_Controller: {fileID: 9100000, guid: d8d702c5f35b4ee429a95f41353962f6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -16690,6 +16690,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2657257064930165361, guid: af271598bde22794b91fdbb68caa6935,
         type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2657257064930165361, guid: af271598bde22794b91fdbb68caa6935,
+        type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 8113ca9f566319349a1e8d8737436fcc,
@@ -18549,7 +18554,7 @@ Animator:
   m_GameObject: {fileID: 695013756}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: db357413ad1a1214789512362d16a325, type: 2}
+  m_Controller: {fileID: 9100000, guid: d8d702c5f35b4ee429a95f41353962f6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -29703,6 +29708,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2657257064930165361, guid: af271598bde22794b91fdbb68caa6935,
         type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2657257064930165361, guid: af271598bde22794b91fdbb68caa6935,
+        type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 8113ca9f566319349a1e8d8737436fcc,
@@ -32489,7 +32499,7 @@ PrefabInstance:
     - target: {fileID: 2657257064930165360, guid: af271598bde22794b91fdbb68caa6935,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.21
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2657257064930165360, guid: af271598bde22794b91fdbb68caa6935,
         type: 3}
@@ -32530,6 +32540,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2657257064930165361, guid: af271598bde22794b91fdbb68caa6935,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2657257064930165361, guid: af271598bde22794b91fdbb68caa6935,
         type: 3}
@@ -35960,7 +35975,7 @@ Animator:
   m_GameObject: {fileID: 1342126531}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: db357413ad1a1214789512362d16a325, type: 2}
+  m_Controller: {fileID: 9100000, guid: d8d702c5f35b4ee429a95f41353962f6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -49241,7 +49256,7 @@ PrefabInstance:
     - target: {fileID: 2657257064930165360, guid: af271598bde22794b91fdbb68caa6935,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.02
+      value: -6.91
       objectReference: {fileID: 0}
     - target: {fileID: 2657257064930165360, guid: af271598bde22794b91fdbb68caa6935,
         type: 3}
@@ -49282,6 +49297,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2657257064930165361, guid: af271598bde22794b91fdbb68caa6935,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2657257064930165361, guid: af271598bde22794b91fdbb68caa6935,
         type: 3}
@@ -49367,7 +49387,7 @@ Animator:
   m_GameObject: {fileID: 1895437789}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: db357413ad1a1214789512362d16a325, type: 2}
+  m_Controller: {fileID: 9100000, guid: d8d702c5f35b4ee429a95f41353962f6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -52721,7 +52741,7 @@ Animator:
   m_GameObject: {fileID: 2018454146}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: db357413ad1a1214789512362d16a325, type: 2}
+  m_Controller: {fileID: 9100000, guid: d8d702c5f35b4ee429a95f41353962f6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
