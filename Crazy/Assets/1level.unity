@@ -13934,7 +13934,7 @@ GameObject:
   - component: {fileID: 551762820}
   m_Layer: 0
   m_Name: Enviroment
-  m_TagString: Untagged
+  m_TagString: environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20782,6 +20782,7 @@ GameObject:
   - component: {fileID: 832108943}
   - component: {fileID: 832108942}
   - component: {fileID: 832108951}
+  - component: {fileID: 832108952}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -21075,6 +21076,19 @@ MonoBehaviour:
   stateHealth: {fileID: 201732249}
   healthBarFilling: {fileID: 449568515}
   startPoint: {fileID: 644386227}
+--- !u!114 &832108952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832108941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf56d39f17978fb4bac5fed0617b8cea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Particles_Dust: {fileID: 1647808423}
 --- !u!4 &834188121 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5448832239383092429, guid: 25e0f22bc4fd4bb42b363aea4f19ee2e,
@@ -40241,7 +40255,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1647808420}
   serializedVersion: 6
-  lengthInSec: 0.9
+  lengthInSec: 0.12
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -40316,7 +40330,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 0.3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
