@@ -8,7 +8,7 @@ public class final : MonoBehaviour
     {
         if (other.gameObject.name == "Player")
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(7);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(5);
         }
     }
 }
