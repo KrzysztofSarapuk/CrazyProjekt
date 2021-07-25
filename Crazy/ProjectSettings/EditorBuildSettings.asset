@@ -21,12 +21,12 @@ EditorBuildSettings:
     path: Assets/BASE/Scenes/4level.unity
     guid: 771129c3bb98fc040a7e600413e13b4c
   - enabled: 1
-    path: Assets/menu_controls.unity
-    guid: 3f959c5485ee3e346bf417264a198909
-  - enabled: 1
     path: Assets/menu_authors.unity
     guid: 0c4793805fd993d4295be6ed3b74b5d0
   - enabled: 1
     path: Assets/the end.unity
     guid: 4c81c0086a2d3194a846935212dca504
+  - enabled: 1
+    path: Assets/menu_controls.unity
+    guid: 3f959c5485ee3e346bf417264a198909
   m_configObjects: {}
